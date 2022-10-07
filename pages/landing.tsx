@@ -1,15 +1,18 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, NextPage } from "next";
+import Home from "../components/Home/Home";
 
-const landing = () => {
-  return <div>Electro Neek</div>;
-};
+interface LandingProps {
+  headingData: string;
+}
+
+const Landing: NextPage<LandingProps> = ({ headingData }) => (
+  <Home data={headingData} />
+);
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return {
-    props: {
-      data: null,
-    },
+    props: { headingData: "YMCB" },
   };
 };
 
-export default landing;
+export default Landing;
