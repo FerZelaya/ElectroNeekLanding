@@ -1,9 +1,35 @@
 .container {
   padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.landingPush {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  background: #00aa5d;
+  border: none;
+  width: 306px;
+  height: 80px;
+  background: #00aa5d;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.landingPush:hover {
+  opacity: 0.7;
 }
 
 .main {
-  min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
