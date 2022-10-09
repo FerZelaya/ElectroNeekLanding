@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import styles from "../../styles/Home.module.css";
 import { LandingHeadingData } from "../../types/API-response.types";
@@ -7,7 +8,11 @@ interface HeadingProps {
 }
 
 const Heading: React.FC<HeadingProps> = ({ heading }) => {
-  const ElectroNeekTitle = heading.yoast_head_json.title.slice(0, 11);
+  const { locale } = useRouter();
+  const ElectroNeekTitle = heading.yoast_head_json.title.slice(
+    0,
+    locale === "en" ? 11 : 19,
+  );
 
   return (
     <div className={styles.headingContainer}>
@@ -15,16 +20,23 @@ const Heading: React.FC<HeadingProps> = ({ heading }) => {
         {heading && (
           <>
             <p className={styles.opacityText}>
-              Deploy your own Robotic Process Automation Platform
+              {locale === "en"
+                ? "Deploy your own Robotic Process Automation Platform"
+                : "Implemente su propia automatización de procesos robóticos"}
             </p>
             <h1 className={styles.headingTitle}>
               <span className={styles.boldText}>{ElectroNeekTitle}</span>
-              {heading.yoast_head_json.title.slice(11, 70)}
+              {heading.yoast_head_json.title.slice(
+                locale === "en" ? 11 : 19,
+                70,
+              )}
             </h1>
             <p className={styles.headingDescription}>
-              ElectroNeek is more than a software vendor - it’s a business
-              partner that supports the growth of MSPs with zero-bot licensing,
-              hot leads, sales and marketing.
+              {heading.excerptNoTags.slice(
+                locale === "en" ? 217 : 0,
+                locale === "en" ? 403 : 372,
+              )}
+              .
             </p>
           </>
         )}

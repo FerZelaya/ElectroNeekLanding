@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
   margin-left: 20px;
 }
 
@@ -52,6 +53,14 @@
   right: 50px;
 }
 
+.langSelect {
+  font-size: 14px;
+  border: none;
+  background: none;
+  padding: 10px;
+  margin: 0;
+}
+
 @media (max-width: 1440px) {
   .navbar {
     padding: 25px;
@@ -71,6 +80,12 @@
   .navbar ul li a {
     font-size: 10px;
   }
+
+  .langSelect {
+    font-size: 10px;
+    align-self: center;
+    padding: 5px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -82,5 +97,9 @@
   }
   .burger {
     display: block;
+  }
+
+  .langSelect {
+    display: none;
   }
 }

@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
       <div className={styles.burger}>
         <Image src={"/img/burgerMenu.svg"} alt="menu" height={20} width={20} />
       </div>
-      <select onChange={(e) => onSelectChange(e)}>
+      <select className={styles.langSelect} onChange={(e) => onSelectChange(e)}>
         <option value={"en"}>EN</option>
         <option value={"es"}>ES</option>
       </select>
