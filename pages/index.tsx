@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         className={styles.landingPush}
         onClick={() => router.push("landing")}
       >
-        Go to ElectroNeek Landing
+        Go to ElectroNeek Landing Test
       </button>
     </div>
   );

@@ -1,9 +1,78 @@
-.container {
-  padding: 0 2rem;
+.homeContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+
   min-height: 100vh;
+}
+
+/*Heading*/
+.headingContainer {
+  padding: 0 10rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(
+      90deg,
+      rgba(21, 27, 48, 1) 15%,
+      rgba(21, 27, 48, 0) 100%
+    ),
+    url("/img/landingImage.svg") no-repeat;
+  background-size: cover;
+}
+
+.headingTextContainer {
+  height: 37rem;
+  width: 40%;
+}
+
+.headingTitle {
+  font-style: normal;
+  font-weight: 200;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.boldText {
+  font-weight: 800;
+}
+
+.opacityText {
+  opacity: 0.7;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.headingDescription {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 35px;
+  margin-bottom: 5rem;
+}
+
+.primaryButton {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  background: #00aa5d;
+  border: none;
+  width: 306px;
+  height: 80px;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.primaryButton:hover {
+  opacity: 0.7;
 }
