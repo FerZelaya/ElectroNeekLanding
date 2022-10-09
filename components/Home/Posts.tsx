@@ -1,12 +1,18 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { InitialPosts } from "../../constants/Posts";
+import { InitialPostsES } from "../../constants/es/Posts.es";
 import styles from "../../styles/Posts.module.css";
 
 const Posts: React.FC = () => {
+  const { locale } = useRouter();
+
+  const translation = locale === "en" ? InitialPosts : InitialPostsES;
+
   return (
     <div className={styles.postsContainer}>
-      {InitialPosts.map((post, index) => {
+      {translation.map((post, index) => {
         return (
           <div key={index} className={styles.postBox}>
             <Image

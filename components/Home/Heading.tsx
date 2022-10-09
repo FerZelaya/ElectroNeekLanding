@@ -12,7 +12,7 @@ const Heading: React.FC<HeadingProps> = ({ heading }) => {
   return (
     <div className={styles.headingContainer}>
       <div className={styles.headingTextContainer}>
-        {heading ? (
+        {heading && (
           <>
             <p className={styles.opacityText}>
               Deploy your own Robotic Process Automation Platform
@@ -20,21 +20,6 @@ const Heading: React.FC<HeadingProps> = ({ heading }) => {
             <h1 className={styles.headingTitle}>
               <span className={styles.boldText}>{ElectroNeekTitle}</span>
               {heading.yoast_head_json.title.slice(11, 70)}
-            </h1>
-            <p className={styles.headingDescription}>
-              ElectroNeek is more than a software vendor - it’s a business
-              partner that supports the growth of MSPs with zero-bot licensing,
-              hot leads, sales and marketing.
-            </p>
-          </>
-        ) : (
-          <>
-            <p className={styles.opacityText}>
-              Deploy your own Robotic Process Automation Platform
-            </p>
-            <h1 className={styles.headingTittle}>
-              <span className={styles.boldText}>The leading RPA vendor</span>{" "}
-              for managed service providers
             </h1>
             <p className={styles.headingDescription}>
               ElectroNeek is more than a software vendor - it’s a business
