@@ -6,6 +6,11 @@ const nextConfig = {
     locales: ["en", "es"],
     defaultLocale: "en",
   },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
 };
 
 module.exports = nextConfig;

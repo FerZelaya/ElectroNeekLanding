@@ -1,5 +1,6 @@
 export interface Posts {
-  text: string;
-  color: string;
+  text1: string;
+  text2: string;
+  arrow: string;
   image: string;
 }

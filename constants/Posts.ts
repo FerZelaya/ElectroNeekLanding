@@ -2,18 +2,21 @@ import { Posts } from "../types/Posts.types";
 
 export const InitialPosts: Posts[] = [
   {
-    text: "Start and grow your rpa service business with electroneek.",
-    color: "#00AA5D",
+    text1: "Start and grow your RPA service business",
+    text2: "with electroneek.",
+    arrow: "/img/arrow1.svg",
     image: "/img/block1.svg",
   },
   {
-    text: "Service clients on your own business terms & build subscription revenue.",
-    color: "#5E3BC3",
+    text1: "Service clients on your own business terms",
+    text2: " & build subscription revenue.",
+    arrow: "/img/arrow2.svg",
     image: "/img/block3.svg",
   },
   {
-    text: "Unlimited scalability and cost savings for enterprise coes.",
-    color: "#F2994A",
+    text1: "Unlimited scalability and cost",
+    text2: " savings for enterprise coes.",
+    arrow: "/img/arrow3.svg",
     image: "/img/block2.svg",
   },
 ];
